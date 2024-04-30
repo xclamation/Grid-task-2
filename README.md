@@ -9,30 +9,37 @@ I attempted to launch this project using Kubernetes Services but couldn't find a
 - Minikube
 
 ## Getting Started
-1. Navigate to the project directory where Dockerfile.backend is located:
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/xclamation/Grid-task-1.git
+```
+
+2. Navigate to the project directory where Dockerfile.backend is located:
 
 ```bash
 cd /project/directory
 ```
 
-2. Build the Docker images for the backend and frontend applications:
+3. Build the Docker images for the backend and frontend applications:
 ```bash
 docker build -t backend-image -f Dockerfile.backend .
 docker build -t frontend-image -f frontend/Dockerfile.frontend frontend/
 ```
   
-3. Start Minikube:
+4. Start Minikube:
 ```bash
 minikube start
 ```
 
-3. Load the Docker images into Minikube:
+5. Load the Docker images into Minikube:
 ```bash
 minikube cache add backend-image
 minikube cache add frontend-image
 ```
 
-4. Create the Kubernetes deployments and services for the backend and frontend applications:
+6. Create the Kubernetes deployments and services for the backend and frontend applications:
 ```bash
 kubectl apply -f backend/k8s/backend-deployment.yml
 kubectl apply -f backend/k8s/backend-service.yml
@@ -40,13 +47,13 @@ kubectl apply -f frontend/k8s/frontend-deployment.yml
 kubectl apply -f frontend/k8s/frontend-service.yml
 ```
 
-5. Verify that the deployments and services are running:
+7. Verify that the deployments and services are running:
 ```bash
 kubectl get deployments
 kubectl get services
 ```
 
-6. Access the application using the IP address of the frontend service:
+8. Access the application using the IP address of the frontend service:
 ```bash
 minikube service frontend-service --url
 ```
