@@ -1,7 +1,7 @@
 # Simple frontend-backend app
 
 This project is a simple web application that consists of a backend API built with Go and a frontend built with React. The application is deployed using Docker and Kubernetes.
-I attempted to launch a project using Kubernetes Services but couldn't find a free solution, so I decided to run the service locally using minikube.
+I attempted to launch this project using Kubernetes Services but couldn't find a free solution, so I decided to run the service locally using minikube.
 
 ## Prerequisites
 
